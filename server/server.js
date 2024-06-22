@@ -21,7 +21,7 @@ app.use('/api/form',contactRoute);
 app.use('/api/data',serviceRoute);
 app.use('/api/admin',adminRoute);
 app.use(errorMiddleware); //add at the end and before the server 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 
 connectDb().then(()=>{
